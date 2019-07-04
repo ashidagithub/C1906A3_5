@@ -23,7 +23,7 @@ f.write(s)
 
 # 如果 j 和 k 的平方和，再开根为整数，则找到解
 for j in range(1, limit+1):
-    for k in range(1, limit+1):
+    for k in range(j, limit+1):
         sum = j*j + k*k
         sroot = math.sqrt(sum)
         if (sroot % 1)==0:
