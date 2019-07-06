@@ -29,13 +29,13 @@ area_min = 999999999999 # 最小面积初始值
 area_total = 0          # 所有三角形的面积
 
 # 暴力循环尝试
-for a in range(1, 15):
-    for b in range(1, 15):
-        for c in range(1,15):
+for a in range(1, 21):
+    for b in range(1, 20):
+        for c in range(1,20):
             count0 = count0 + 1
-            if (a + b >= c) and (a + c >= b) and (b + c >= a):
+            if (a + b > c) and (a + c > b) and (b + c > a):
                 if (abs(a - b) >= c) or (abs(a - c) >= b) or (abs(b - c) >=a):
-                    # print("{0},{1},{2} 错误！某两边之差大于第三边，所以无法组成三角形。".format(a,b,c))
+                    print("{0},{1},{2} 错误！某两边之差大于第三边，所以无法组成三角形。".format(a,b,c))
                     count1 = count1 + 1
                 else:
                     if (a==b) or (b==c) or (a==c):
