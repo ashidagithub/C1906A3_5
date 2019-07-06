@@ -28,10 +28,12 @@ area_max = 0            # 最大面积初始值
 area_min = 999999999999 # 最小面积初始值
 area_total = 0          # 所有三角形的面积
 
+max_len = 5
+
 # 暴力循环尝试
-for a in range(1, 21):
-    for b in range(1, 20):
-        for c in range(1,20):
+for a in range(1, max_len):
+    for b in range(a, max_len):
+        for c in range(b, max_len):
             count0 = count0 + 1
             if (a + b > c) and (a + c > b) and (b + c > a):
                 if (abs(a - b) >= c) or (abs(a - c) >= b) or (abs(b - c) >=a):
@@ -77,19 +79,19 @@ text2write = '总共尝试了 {0} 次组合。'.format(count0)
 print(text2write)
 f.write(text2write)
 
-text2write = '无法组成三角形的组合有 {0} 个，占比{1}%'.format(count1, count1/count0*100)
+text2write = '无法组成三角形的组合有 %d 个，占比%0.2f%%' % (count1, count1/count0*100)
 print(text2write)
 f.write(text2write)
 
-text2write = '等腰三角形的组合有{0}个，占比{1}%'.format(count2,count2/count0*100)
+text2write = '等腰三角形的组合有 %d 个，占比 %0.2f%%'.format(count2,count2/count0*100)
 print(text2write)
 f.write(text2write)
 
-text2write = '等边三角形的组合有{0}个，占比{1}%'.format(count3,count3/count0*100)
+text2write = '等边三角形的组合有 %d 个，占比 %0.2f%%'.format(count3,count3/count0*100)
 print(text2write)
 f.write(text2write)
 
-text2write = '不等边三角形的组合有{0}个，占比{1}%'.format(count4,count4/count0*100)
+text2write = '不等边三角形的组合有 %d 个，占比 %0.2f%%'.format(count4,count4/count0*100)
 print(text2write)
 f.write(text2write)
 

@@ -14,11 +14,13 @@ count2 = 0  # 等腰三角形计数器
 count3 = 0  # 等边三角形计数器
 count4 = 0  # 不等边三角形计数器
 
-for a in range(1, 11):
-    for b in range(1, 11):
-        for c in range(1,11):
+max_len = 11
+
+for a in range(1, max_len):
+    for b in range(a, max_len):
+        for c in range(b, max_len):
             count0 = count0 + 1
-            if (a + b >= c) and (a + c >= b) and (b + c >= a):
+            if (a + b > c) and (a + c > b) and (b + c > a):
                 if (abs(a - b) >= c) or (abs(a - c) >= b) or (abs(b - c) >=a):
                     # print("{0},{1},{2} 错误！某两边之差大于第三边，所以无法组成三角形。".format(a,b,c))
                     count1 = count1 + 1
