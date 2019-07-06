@@ -29,8 +29,8 @@ for j in range(1, limit+1):
     for k in range(j, limit+1):
         sum = math.pow(j,n) + math.pow(k,n)
         sroot = math.pow(sum, 1/n)
+        #if (sroot % 1)<0.001:
         if (sroot % 1)==0:
-        # if (sroot % 1)<0.001:
             count = count + 1
             s = '找到解：%d^%d + %d^%d = %d^%d\n' % (j,n,k,n,sroot,n)
             print (s)

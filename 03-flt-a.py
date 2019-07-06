@@ -9,7 +9,7 @@
 import math
 
 # 定义解的上限
-limit = 100
+limit = 50
 
 # 定义计数器
 count = 0
@@ -27,6 +27,7 @@ for j in range(1, limit+1):
         sum = j*j + k*k
         sroot = math.sqrt(sum)
         if (sroot % 1)==0:
+        #if isinstance(sroot, int):
             count = count + 1
             s = '找到解：%d^2 + %d^2 = %d^2\n' % (j,k,sroot)
             print (s)
