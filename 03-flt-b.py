@@ -9,7 +9,7 @@
 import math
 
 # 定义解的上限
-limit = 50
+limit = 100
 
 # 定义计数器
 count = 0
